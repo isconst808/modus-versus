@@ -1,0 +1,110 @@
+.main-slider {
+    max-width: $max-width-web;
+    margin: 0 auto;
+    &-inner {
+        position: relative;
+        max-height: 500px;
+        img {
+            transform: translateY(-10%);
+        }
+    }
+    &-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            @include font(700, 5rem);
+            background: $hover;
+            color: $white;
+            line-height: 1;
+            text-align: center;
+            padding: 0px 14px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        p {
+            @include font(null, 1.6rem);
+            background: rgba($black, 0.5);
+            line-height: 1.6;
+            text-align: center;
+            color: $white;
+            padding: 0 0;
+            border-radius: 5px;
+            margin: 10px auto;
+        }
+    }
+}
+
+.slick {
+    &-prev {
+        z-index: 999;
+        left: 0;
+        width: 50px;
+        height: 60px;
+        background: $hover;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom: 3px solid darken($hover, 10%);
+        &::before {
+            content: $icon-angle-double-left;
+            display: block;
+            font-family: "iconFonts";
+            opacity: 1;
+            font-size: 4rem;
+        }
+        &:hover, &:focus  {
+            background: $hover;
+        }
+    }
+
+    &-next {
+        z-index: 999;
+        right: 0;
+        width: 50px;
+        height: 60px;
+        background: $hover;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom: 3px solid darken($hover, 10%);
+        &::before {
+            content: $icon-angle-double-right;
+            display: block;
+            font-family: "iconFonts";
+            opacity: 1;
+            font-size: 4rem;
+        }
+        &:hover, &:focus {
+            background: $hover;
+        }
+    }
+    &-dots {
+        li {
+            width: 60px;
+            height: 5px;
+            &.slick-active button::before {
+                color: transparent;
+                opacity: 1;
+                background: $hover;
+            }
+            button {
+                padding: 0;
+                width: 60px;
+                height: 5px;
+                &::before {
+                    opacity: 1;
+                    color: transparent;
+                    content: '';
+                    width: 60px;
+                    height: 5px;
+                    background: $slider-dots;
+                }
+            }
+        }
+    }
+}
+

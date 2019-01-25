@@ -1,0 +1,48 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    @include font();
+    background: $main-bg;
+    color: $main-color;
+}
+
+h2, h3, h4 {
+    color: $title;
+}
+
+button {
+    border: none;
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    @include font();
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    a {
+        background-color: $main-btn;
+        border-radius: 5px;
+        border-bottom: 3px solid darken($main-btn, 10%);
+        &:hover {
+            background-color: $hover;
+            border-bottom-color: darken($hover, 10%)
+        } 
+    }
+}

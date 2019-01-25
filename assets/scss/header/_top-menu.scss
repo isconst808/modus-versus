@@ -1,0 +1,43 @@
+.top-menu {
+    &-box {
+        position: relative;
+        float: right;
+    }
+    &-btn {
+        display: none;
+        width: 28px;
+        cursor: pointer;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            list-style-type: none;
+            a {
+                @include font(600);
+                color:  $white;
+                line-height: 1.2;
+                text-transform: uppercase;
+                padding: 5.5px 14px;
+                &:hover {
+                    background-color: $hover;
+                    border-radius: 5px;
+                    border-bottom: 3px solid darken($hover, 10%);
+                }
+            }
+            &.current-menu-item {
+                a {
+                    @include font(null, 1.4rem);
+                    background-color: rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    border-bottom: 3px solid darken(rgba(0, 0, 0, 0.2), 10%);
+                    &:hover {
+                        background-color: $hover;
+                        border-radius: 5px;
+                        border-bottom: 3px solid darken($hover, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

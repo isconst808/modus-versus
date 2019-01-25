@@ -1,0 +1,26 @@
+// Fonts
+
+$main-font-family: 'Open Sans', sans-serif;
+
+@mixin font($weight: 400, $size: 1.3rem, $style: normal ) {
+    // $a: 400, 600, 700, 800
+    // $b: italic
+    font-family: $main-font-family;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+// Colors 
+$main-btn: #76c7c0;
+$white: #fff;
+$hover: #e2534b;
+$main-bg: #f3f3f3;
+$second-bg: #ececec;
+$black: #000;
+$slider-dots: #b0b8b9;
+$title: #7f8c8c;
+$main-color: #777777;
+
+// Size
+$max-width-web: 1500px;

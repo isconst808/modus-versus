@@ -1,0 +1,41 @@
+.header {
+    background: $main-btn;
+    height: 80px;
+    position: relative;
+    &:before {
+        content: '';
+        display: inline-block;
+        background-image: url('assets/img/svg/ruler.svg');
+        background-size: contain;
+        opacity: .1;
+        width: 100%;
+        height: 9px;
+        position: absolute;
+        bottom: 0;
+    }
+    .container {
+        height: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        .row {
+            height: 100%;
+        }
+    }
+}
+
+.logo {
+    a {
+        @include font(800, 3rem);
+        color: $white;
+        text-transform: uppercase;
+        word-spacing: -4px;
+        line-height: 23px;
+        .small {
+            @include font(400, 2.5rem);
+            text-transform: lowercase;
+        }
+    }
+}
+
+@import 'top-menu';
+@import 'search'

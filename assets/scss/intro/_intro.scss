@@ -1,0 +1,23 @@
+.intro {
+    &-block {
+        background-color: $second-bg;
+        border-radius: 5px;
+        padding: 25px 30px;
+    }
+    &-text {
+        h2 {
+            @include font(600, 3rem);
+        }
+    }
+    &-btn {
+        display: block;
+        margin: 0 auto;
+        a {
+            @include font(600, 2rem);
+            color: $white;
+            display: block;
+            padding: 8px 43px;
+            text-transform: uppercase;
+        }
+    }
+}

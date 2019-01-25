@@ -1,0 +1,11 @@
+.search {
+    &-block {
+        position: relative;
+    }
+    &-btn {
+        .icon-search {
+            font-size: 1.6rem;
+            color: $white;
+        }
+    }
+}
